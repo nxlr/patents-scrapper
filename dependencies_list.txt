@@ -1,0 +1,31 @@
+# packages in environment at /home/sachin/miniconda2/envs/projects3:
+#
+# Name                    Version                   Build  Channel
+beautifulsoup4            4.7.1                     <pip>
+ca-certificates           2018.12.5                     0  
+certifi                   2018.8.24                py35_1  
+chardet                   3.0.4                     <pip>
+idna                      2.8                       <pip>
+libgcc-ng                 8.2.0                hdf63c60_1  
+lxml                      4.3.0                     <pip>
+MechanicalSoup            0.11.0                    <pip>
+numpy                     1.16.0                    <pip>
+openssl                   1.0.2p               h14c3975_0  
+pandas                    0.23.4                    <pip>
+pip                       10.0.1                   py35_0  
+python                    3.5.2                         0  
+python-dateutil           2.7.5                     <pip>
+pytz                      2018.9                    <pip>
+readline                  6.2                           2  
+requests                  2.21.0                    <pip>
+robobrowser               0.5.3                     <pip>
+setuptools                40.2.0                   py35_0  
+six                       1.12.0                    <pip>
+soupsieve                 1.7.2                     <pip>
+sqlite                    3.13.0                        0  
+tk                        8.5.18                        0  
+urllib3                   1.24.1                    <pip>
+Werkzeug                  0.14.1                    <pip>
+wheel                     0.31.1                   py35_0  
+xz                        5.2.4                h14c3975_4  
+zlib                      1.2.11               h7b6447c_3  
