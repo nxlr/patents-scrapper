@@ -6,6 +6,7 @@ import pandas as pd
 import numpy as np
 import mechanicalsoup
 import re
+import time
 
 # cleaning/readying our patent_data file
 open('patent_data.json', 'w').close()
@@ -92,17 +93,27 @@ def form_submit(num):
 
     return data
 
+# main function
+if __name__ == '__main__':
+    start = time.time()
+    patents = []
+    # looping through all patent numbers to extract and store relevant data in JSON file
+    with open(patent_numbers) as f:
+        for line in f:
+            if line != '\n':
+                num = line.rstrip()
+                print(num)
+                patent_data = form_submit(num)
+                patents.append({num : patent_data})
+                with open('patent_data.json', 'w') as f:  
+                    json.dump(patents, f)
+            else:
+                continue
 
-patents = []
-# looping through all patent numbers to extract and store relevant data in JSON file
-with open(patent_numbers) as f:
-    for line in f:
-        if line != '\n':
-            num = line.rstrip()
-            print(num)
-            patent_data = form_submit(num)
-            patents.append({num : patent_data})
-            with open('patent_data.json', 'w') as f:  
-                json.dump(patents, f)
-        else:
-            continue
+    # print the json data
+    with open('patent_data.json', 'r') as handle:
+        parsed = json.load(handle)
+
+    print(json.dumps(parsed, indent=4, sort_keys=True))
+    end = time.time()
+    print("\n Execution Time: ",end - start)
